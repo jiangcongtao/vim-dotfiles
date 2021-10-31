@@ -1,0 +1,33 @@
+# VIM
+
+- The default <leader> key (without let mapleader=) is \
+- Find what key is set to <leader> key, in vim/nvim command mode,type :echo mapleader
+- Movement under vim command mode
+  - Shift-<left arrow> : move left one word
+  - Shift-<right arrow>: move right one word
+  - Ctrl-a/<Home> : move to beginning
+  - Ctrl-e/<End>  : move to end 
+  - Ctrl-w : delete word at cursor
+  - Ctrl-k : delete all words after cursor
+  - Ctrl-u : delete all words before cursor
+- Check mappings
+  - :h map-listing
+  - :h mapping
+  - :h :map
+  - :map 
+  - :verbose map <C-W>*
+  - :map <leader>
+  - :map <Leader>m
+  - :map j
+  - :map <F5>
+  - :unmap <key> (reset a mapping), :iunmap <key>
+  - :help :unmap
+  - Remember that some key combinations are equivalent,Because of the hexadecimal codes that are produced some key combinations will be interpreted by Vim as another key.
+    - For example:
+      - <C-h> is same as <backspace>
+      - <C-j> is same as <enter>
+      - <C-S-a> is same as <C-a>
+  - Check that your leader is CORRECTly defined:
+    - Leader must be defined before the definiton of the mappings
+    - Use space bar as leader, should be defined as: let mapleader="\<Space>"
+    - Reference: https://vi.stackexchange.com/questions/7722/how-to-debug-a-mapping
