@@ -31,3 +31,12 @@
     - Leader must be defined before the definiton of the mappings
     - Use space bar as leader, should be defined as: let mapleader="\<Space>"
     - Reference: https://vi.stackexchange.com/questions/7722/how-to-debug-a-mapping
+  - Get help
+    - :h <string><tab>
+    - :helpgrep PATTERN
+      - :cnext :cprev
+      - :cnfile
+    - :CTRL-] go to the topic
+    - :CTRL-T back to the previous topic
+    - :CTRL-W T(SHIFT-t) convert split window to tab
+    - ZZ or :q exit help window/tab
