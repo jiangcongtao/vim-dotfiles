@@ -36,7 +36,12 @@ Plug 'sharkdp/fd'
 Plug 'ggandor/lightspeed.nvim'
 " floatterm
 Plug 'voldikss/vim-floaterm'
+Plug 'rakr/vim-one'
 call plug#end()
+
+let g:airline_theme='one'
+colorscheme one
+set background=dark " for the dark version
 
 " vim-floaterm
 " Configuration example
