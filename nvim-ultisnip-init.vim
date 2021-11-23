@@ -16,6 +16,11 @@ endif
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
+" Setup leader key
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ','
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
 " Mapping for moving cursor in insert mode
 imap <C-h> <C-\><C-o>h
@@ -40,6 +45,8 @@ Plug 'rakr/vim-one'
 " Need install Nerd Fonts to have a nice looking airline status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
 let g:airline_theme='one'
