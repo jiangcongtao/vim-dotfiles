@@ -27,7 +27,7 @@ call plug#begin('~/.vim/plugged')
 " ultisnips
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-" telescope
+" telescope - brew install fd rg
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'BurntSushi/ripgrep'
@@ -37,18 +37,23 @@ Plug 'ggandor/lightspeed.nvim'
 " floatterm
 Plug 'voldikss/vim-floaterm'
 Plug 'rakr/vim-one'
+" Need install Nerd Fonts to have a nice looking airline status line
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 let g:airline_theme='one'
+let g:airline#extensions#tabline#enabled = 1
 colorscheme one
 set background=dark " for the dark version
+let g:airline_powerline_fonts = 1 " enable nice looking status line
 
 " vim-floaterm
 " Configuration example
-let g:floaterm_keymap_new    = '<F7>'
-let g:floaterm_keymap_prev   = '<F8>'
-let g:floaterm_keymap_next   = '<F10>'
-let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_keymap_new    = '<F5>'
+let g:floaterm_keymap_prev   = '<F6>'
+let g:floaterm_keymap_next   = '<F7>'
+let g:floaterm_keymap_toggle = '<F8>'
 
 " telescope configuration
 " Find files using Telescope command-line sugar.
