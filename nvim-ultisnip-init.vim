@@ -1,4 +1,4 @@
-set nu rnu ts=4 sts=4 sw=4 et
+set nu rnu ts=4 sts=4 sw=4 et ci si
 syntax enable
 filetype plugin indent on
 
@@ -41,15 +41,30 @@ Plug 'sharkdp/fd'
 Plug 'ggandor/lightspeed.nvim'
 " floatterm
 Plug 'voldikss/vim-floaterm'
+Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-one'
 " Need install Nerd Fonts to have a nice looking airline status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'liuchengxu/vim-which-key'
+" Coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-let g:airline_theme='one'
+""" Customize colors for coc suggestion popmenu
+func! s:my_colors_setup() abort
+    " this is an example
+    highlight PMenu ctermfg=0 ctermbg=242 
+    highlight PMenuSel ctermfg=100 ctermbg=260 
+endfunc
+
+augroup colorscheme_coc_setup | au!
+    au ColorScheme * call s:my_colors_setup()
+augroup END
+
+
+"let g:airline_theme='one'
 let g:airline#extensions#tabline#enabled = 1
 colorscheme one
 set background=dark " for the dark version
